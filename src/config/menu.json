@@ -15,7 +15,7 @@
       "children": [
         {
           "name": "Nyheter",
-          "url": "/blog"
+          "url": "/nyheter"
         },
         {
           "name": "Skapare",
