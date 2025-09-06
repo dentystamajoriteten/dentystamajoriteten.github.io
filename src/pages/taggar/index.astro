@@ -6,12 +6,12 @@ import PageHeader from "@/partials/PageHeader.astro";
 
 const BLOG_FOLDER = "blog";
 
-const tags = await getTaxonomy(BLOG_FOLDER, "tags");
-const allTags = await getAllTaxonomy(BLOG_FOLDER, "tags");
+const tags = await getTaxonomy(BLOG_FOLDER, "taggar");
+const allTags = await getAllTaxonomy(BLOG_FOLDER, "taggar");
 ---
 
-<Base title={"Tags"}>
-  <PageHeader title={"Tags"} />
+<Base title={"Taggar"}>
+  <PageHeader title={"Taggar"} />
   <section class="section">
     <div class="container text-center">
       <ul>
@@ -21,7 +21,7 @@ const allTags = await getAllTaxonomy(BLOG_FOLDER, "tags");
             return (
               <li class="m-3 inline-block">
                 <a
-                  href={`/tags/${tag}`}
+                  href={`/taggar/${tag}`}
                   class="block rounded bg-light px-4 py-2 text-xl text-text-dark dark:bg-darkmode-light dark:text-darkmode-text-dark"
                 >
                   {humanize(tag)}{" "}

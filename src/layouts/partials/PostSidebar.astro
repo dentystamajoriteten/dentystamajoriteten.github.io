@@ -32,7 +32,7 @@ const { tags, categories, allCategories } = Astro.props;
   </div>
   <!-- tags -->
   <div class="mb-8">
-    <h5 class="mb-6">Tags</h5>
+    <h5 class="mb-6">Taggar</h5>
     <div class="rounded bg-light p-6 dark:bg-darkmode-light">
       <ul>
         {
@@ -41,7 +41,7 @@ const { tags, categories, allCategories } = Astro.props;
               <li class="inline-block">
                 <a
                   class="m-1 block rounded bg-white px-3 py-1 hover:bg-primary hover:text-white dark:bg-darkmode-body dark:hover:bg-darkmode-primary dark:hover:text-text-dark"
-                  href={`/tags/${tag}`}
+                  href={`/taggar/${tag}`}
                 >
                   {humanize(tag)}
                 </a>

@@ -9,7 +9,7 @@ import PageHeader from "@/partials/PageHeader.astro";
 
 export async function getStaticPaths() {
   const BLOG_FOLDER = "blog";
-  const tags = await getTaxonomy(BLOG_FOLDER, "tags");
+  const tags = await getTaxonomy(BLOG_FOLDER, "taggar");
 
   return tags.map((tag) => {
     return {
@@ -23,7 +23,7 @@ const { tag } = Astro.params;
 // get posts by tag
 const BLOG_FOLDER = "blog";
 const posts = await getSinglePage(BLOG_FOLDER);
-const filterByTags = taxonomyFilter(posts, "tags", tag!);
+const filterByTags = taxonomyFilter(posts, "taggar", tag!);
 const sortedPosts = sortByDate(filterByTags);
 ---
 

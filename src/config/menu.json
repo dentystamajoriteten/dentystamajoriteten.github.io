@@ -26,12 +26,8 @@
           "url": "/kategorier"
         },
         {
-          "name": "Tags",
-          "url": "/tags"
-        },
-        {
-          "name": "404 Page",
-          "url": "/404"
+          "name": "Taggar",
+          "url": "/taggar"
         }
       ]
     }
