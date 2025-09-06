@@ -1,13 +1,15 @@
 ---
 import ImageMod from "@/components/ImageMod.astro";
 import Base from "@/layouts/Base.astro";
+import BlogCard from "@/components/BlogCard.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
 import { markdownify } from "@/lib/utils/textConverter";
-import CallToAction from "@/partials/CallToAction.astro";
-import Testimonial from "@/partials/Testimonial.astro";
 import type { Button, Feature } from "@/types";
 import type { CollectionEntry } from "astro:content";
 import { getEntry } from "astro:content";
 import { FaCheck } from "react-icons/fa";
+
+const BLOG_FOLDER = "blog";
 
 interface Homepage {
   banner: {
@@ -24,17 +26,9 @@ const homepage = (await getEntry(
   "-index"
 )) as CollectionEntry<"homepage">;
 
-const testimonial = (await getEntry(
-  "testimonialSection",
-  "testimonial"
-)) as CollectionEntry<"testimonialSection">;
-
-const call_to_action = (await getEntry(
-  "ctaSection",
-  "call-to-action"
-)) as CollectionEntry<"ctaSection">;
-
 const { banner, features } = homepage.data as Homepage;
+const posts = await getSinglePage(BLOG_FOLDER);
+const latestPosts = posts.slice(0, 3);
 ---
 
 <Base>
@@ -82,43 +76,24 @@ const { banner, features } = homepage.data as Homepage;
   <!-- /Banner -->
 
   <!-- Features -->
-  {
-    features.map((feature, index: number) => (
-      <section class={`section-sm ${index % 2 === 0 && "bg-gradient"}`}>
-        <div class="container">
-          <div class="row items-center justify-between">
-            <div
-              class={`mb:md-0 mb-6 md:col-5 ${index % 2 !== 0 && "md:order-2"}`}
-            >
-              <ImageMod
-                src={feature.image}
-                height={480}
-                width={520}
-                alt={feature.title}
-                format="webp"
-              />
+
+    
+  <section class="section-sm bg-gradient">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="mb-8 text-h3 lg:text-h1">Senaste Nyheter</h2>
+      </div>
+      
+      <div class="md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        { 
+          latestPosts.map(post => (
+            <div class="">
+              <BlogCard data={post}/>
             </div>
-            <div class={`md:col-7 lg:col-6 ${index % 2 !== 0 && "md:order-1"}`}>
-              <h2 set:html={markdownify(feature.title)} class="mb-4" />
-              <p set:html={markdownify(feature.content)} class="mb-8 text-lg" />
-              <ul>
-                {feature.bulletpoints.map((bullet: string) => (
-                  <li class="relative mb-4 pl-6">
-                    <FaCheck className={"absolute left-0 top-1.5"} />
-                    <span set:html={markdownify(bullet)} />
-                  </li>
-                ))}
-              </ul>
-              {feature.button.enable && (
-                <a class="btn btn-primary mt-5" href={feature.button.link}>
-                  {feature.button.label}
-                </a>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-    ))
-  }
+          ))
+        }
+      </div>
+    </div>
+  </section>
   <!-- /Features -->
 </Base>

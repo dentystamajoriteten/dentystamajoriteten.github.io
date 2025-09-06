@@ -3,7 +3,7 @@
 banner:
   title: "Den Tysta Majoriteten"
   content: "\"Den Tysta Majoriteten\" är en journalistisk plattform som ger röst åt de idéer och åsikter som många delar, men som ofta tystas eller ignoreras i dagens politiskt korrekta och mediestyrda klimat."
-  image: ""
+  image: "/images/banner.jpg"
   button:
     enable: false
     label: "Get Started For Free"
