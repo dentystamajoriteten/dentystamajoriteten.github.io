@@ -10,7 +10,7 @@ const blogCollection = defineCollection({
     description: z.string().optional(),
     date: z.date().optional(),
     image: z.string().optional(),
-    author: z.string().default("Admin"),
+    skapare: z.string().default("Admin"),
     kategorier: z.array(z.string()).default(["others"]),
     taggar: z.array(z.string()).default(["others"]),
     draft: z.boolean().optional(),

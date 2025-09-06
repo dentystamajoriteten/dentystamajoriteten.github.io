@@ -4,7 +4,7 @@ meta_title: ""
 description: "this is meta description"
 date: 2022-04-04T05:00:00Z
 image: "/images/image-placeholder.png"
-author: "Alexander Borgert"
+skapare: "Alexander Borgert"
 taggar: ["silicon", "technology"]
 kategorier: ["Politik"]
 draft: false

@@ -16,7 +16,7 @@ const { post } = Astro.props;
 const posts = await getSinglePage(COLLECTION_FOLDER);
 const similarPosts = similarItems(post, posts);
 const { Content } = await render(post);
-const { title, description, author, kategorier, image, date, taggar } = post.data;
+const { title, description, skapare, kategorier, image, date, taggar } = post.data;
 ---
 
 <section class="section pt-7">
@@ -40,9 +40,9 @@ const { title, description, author, kategorier, image, date, taggar } = post.dat
         <h1 set:html={markdownify(title)} class="h2 mb-4" />
         <ul class="mb-4">
           <li class="mr-4 inline-block">
-            <a href={`/authors/${slugify(author)}`}>
+            <a href={`/authors/${slugify(skapare)}`}>
               <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
-              {humanize(author)}
+              {humanize(skapare)}
             </a>
           </li>
           <li class="mr-4 inline-block">

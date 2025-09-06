@@ -10,7 +10,7 @@ const {
   blog_folder,
 }: { summary_length: number; blog_folder: string } = config.settings;
 const { data } = Astro.props;
-const { title, image, date, author, kategorier } = data.data;
+const { title, image, date, skapare, kategorier } = data.data;
 ---
 
 <div class="bg-body dark:bg-darkmode-body">
@@ -33,9 +33,9 @@ const { title, image, date, author, kategorier } = data.data;
   </h4>
   <ul class="mb-4">
     <li class="mr-4 inline-block">
-      <a href={`/authors/${slugify(author)}`}>
+      <a href={`/skapare/${slugify(skapare)}`}>
         <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
-        {humanize(author)}
+        {humanize(skapare)}
       </a>
     </li>
     <li class="mr-4 inline-block">
