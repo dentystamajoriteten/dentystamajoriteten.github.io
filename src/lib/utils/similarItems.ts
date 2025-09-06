@@ -4,8 +4,8 @@ const similarItems = (currentItem: any, allItems: any[]) => {
   let tags: string[] = [];
 
   // set categories
-  if (currentItem.data.categories.length > 0) {
-    categories = currentItem.data.categories;
+  if (currentItem.data.kategorier.length > 0) {
+    categories = currentItem.data.kategorier;
   }
 
   // set tags
@@ -15,7 +15,7 @@ const similarItems = (currentItem: any, allItems: any[]) => {
 
   // filter by categories
   const filterByCategories = allItems.filter((item: any) =>
-    categories.find((category) => item.data.categories.includes(category)),
+    categories.find((category) => item.data.kategorier.includes(category)),
   );
 
   // filter by tags

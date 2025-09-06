@@ -10,26 +10,26 @@ import PageHeader from "@/partials/PageHeader.astro";
 // get static paths for all categories
 export async function getStaticPaths() {
   const BLOG_FOLDER = "blog";
-  const categories = await getTaxonomy(BLOG_FOLDER, "categories");
+  const categories = await getTaxonomy(BLOG_FOLDER, "kategorier");
 
-  return categories.map((category) => {
+  return categories.map((kategori) => {
     return {
-      params: { category },
+      params: { kategori },
     };
   });
 }
 
-const { category } = Astro.params;
+const { kategori } = Astro.params;
 
-// get posts by category
+// get posts by kategori
 const BLOG_FOLDER = "blog";
 const posts = await getSinglePage(BLOG_FOLDER);
-const filterByCategories = taxonomyFilter(posts, "categories", category!);
+const filterByCategories = taxonomyFilter(posts, "kategorier", kategori!);
 const sortedPosts = sortByDate(filterByCategories);
 ---
 
-<Base title={category}>
-  <PageHeader title={category} />
+<Base title={kategori}>
+  <PageHeader title={kategori} />
   <div class="section-sm pb-0">
     <div class="container">
       <div class="row">
