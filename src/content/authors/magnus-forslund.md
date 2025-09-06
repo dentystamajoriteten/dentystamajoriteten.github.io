@@ -1,7 +1,7 @@
 ---
-title: John Doe
-email: johndoe@email.com
-image: "/images/avatar.png"
+title: Magnus Forslund
+email: samwilson@email.com
+image: "/images/magnus_profile.jpg"
 description: this is meta description
 social:
   - name: github

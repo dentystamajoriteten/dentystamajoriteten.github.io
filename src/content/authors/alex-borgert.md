@@ -1,7 +1,7 @@
 ---
-title: William Jacob
-email: williamjacob@email.com
-image: "/images/avatar.png"
+title: Alexander Borgert
+email: alex.borgert@gmail.com
+image: "/images/alex_profile.png"
 description: this is meta description
 social:
   - name: github

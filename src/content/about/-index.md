@@ -1,9 +1,14 @@
 ---
-title: "Hey, I am John Doe!"
-meta_title: "About"
-description: "this is meta description"
-image: "/images/avatar.png"
+title: "Om"
+meta_title: "Om"
+description: "DenTystaMajoriteten är en journalistisk plattform som ger röst åt de idéer och åsikter som många delar, men som ofta tystas eller ignoreras i dagens politiskt korrekta och mediestyrda klimat."
+image: ""
 draft: false
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum nesciunt commodi vel nisi ut alias excepturi ipsum, totam, labore tempora, odit ex iste tempore sed. Fugit voluptatibus perspiciatis assumenda nulla ad nihil, omnis vel, doloremque sit quam autem optio maiores, illum eius facilis et quo consectetur provident dolor similique! Enim voluptatem dicta expedita veritatis repellat dolorum impedit, provident quasi at.
+**"Den Tysta Majoriteten"** är en journalistisk plattform som ger röst åt de idéer och åsikter som många delar, men som ofta tystas eller ignoreras i dagens politiskt korrekta och mediestyrda klimat.
+
+Vi vill skapa ett forum där konservativa, religiösa och kritiska perspektiv kan diskuteras öppet, där frågor som påverkar vardag, kultur och samhällsstruktur belyses utan censur, och där den tysta majoritetens röst äntligen blir hörd.
+
+Genom reportage, analyser och debatt vill vi ifrågasätta makt, utmana normer och främja en mer nyanserad samhällsdebatt. Målet är att informera utan filter, utan att vara politiskt korrekta och utan att vara woke, bevaka nyheter både i Sverige och inom EU, ämnen massmedia inte rapporterar och makthavare vill dölja.
+

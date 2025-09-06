@@ -1,32 +1,24 @@
 {
   "main": [
     {
-      "name": "Home",
+      "name": "Hem",
       "url": "/"
     },
     {
-      "name": "About",
+      "name": "Om",
       "url": "/about"
     },
     {
-      "name": "Elements",
-      "url": "/elements"
-    },
-    {
-      "name": "Pages",
+      "name": "Sidor",
       "url": "",
       "hasChildren": true,
       "children": [
         {
-          "name": "Contact",
-          "url": "/contact"
-        },
-        {
-          "name": "Blog",
+          "name": "Nyheter",
           "url": "/blog"
         },
         {
-          "name": "Authors",
+          "name": "Skapare",
           "url": "/authors"
         },
         {
