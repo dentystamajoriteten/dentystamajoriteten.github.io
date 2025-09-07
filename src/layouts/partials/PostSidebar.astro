@@ -1,10 +1,36 @@
 ---
 import { humanize } from "@/lib/utils/textConverter";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import AuthorCard from "@/components/AuthorCard.astro";
 
+const COLLECTION_FOLDER = "authors";
 const { tags, categories, allCategories } = Astro.props;
+const authors = await getSinglePage(COLLECTION_FOLDER);
 ---
 
 <div class="lg:col-4">
+  <!-- skapare -->
+    <div class="mb-8">
+    <h5 class="mb-6">Skapare</h5>
+    <div class="rounded bg-light p-6 dark:bg-darkmode-light">
+      <ul>
+        {
+          authors.map((author) => {
+            return (
+              <li class="inline-block">
+                <a
+                  class="m-1 block rounded bg-white px-3 py-1 hover:bg-primary hover:text-white dark:bg-darkmode-body dark:hover:bg-darkmode-primary dark:hover:text-text-dark"
+                  href={`/skapare/${author.id}`}
+                >
+                  {author.data.title}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  </div>
   <!-- categories -->
   <div class="mb-8">
     <h5 class="mb-6">Kategorier</h5>

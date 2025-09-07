@@ -9,27 +9,8 @@
       "url": "/about"
     },
     {
-      "name": "Sidor",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Nyheter",
-          "url": "/nyheter"
-        },
-        {
-          "name": "Skapare",
-          "url": "/skapare"
-        },
-        {
-          "name": "Kategorier",
-          "url": "/kategorier"
-        },
-        {
-          "name": "Taggar",
-          "url": "/taggar"
-        }
-      ]
+      "name": "Nyheter",
+      "url": "/nyheter"
     }
   ],
   "footer": [
